@@ -1,0 +1,32 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Domain\File\Model\File" >
+        <id name="id" type="uuid" column="id">
+            <generator strategy="CUSTOM"/>
+            <custom-id-generator class="Ramsey\Uuid\Doctrine\UuidGenerator"/>
+        </id>
+        <field name="name" type="string"/>
+        <field name="original_name" type="string"/>
+        <field name="type" type="string"/>
+        <field name="path" type="string" >
+            <options>
+                <option name="default">/</option>
+            </options>
+        </field>
+        <field name="acl" type="string">
+            <options>
+                <option name="default">private</option>
+            </options>
+        </field>
+        <field name="meta" type="json" nullable="true"/>
+        <field name="created_at" type="datetime">
+            <options>
+                <option name="default">CURRENT_TIMESTAMP</option>
+            </options>
+        </field>
+        <field name="updated_at" type="datetime">
+            <options>
+                <option name="default">CURRENT_TIMESTAMP</option>
+            </options>
+        </field>
+    </entity>
+</doctrine-mapping>

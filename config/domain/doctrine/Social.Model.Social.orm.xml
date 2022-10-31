@@ -1,0 +1,4 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Domain\Social\Model\Social">
+    </entity>
+</doctrine-mapping>
